@@ -1,0 +1,71 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+      
+      <mat-toolbar >
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon >menu</mat-icon> &nbsp; &nbsp; &nbsp;
+          <img src="../assets/arnet1.jpg" alt="arnet">
+          
+        </button>
+        <span class="example-spacer"></span>
+      </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="home1"><span  class="iconcolor">
+        <span class="material-icons">
+          home_work
+          </span>
+        Home</span></a>
+      <a mat-list-item href="agentform"><span  class="iconcolor"><span class="material-icons">
+        menu_book
+        </span>Form</span></a>
+      <a mat-list-item href="#"><span class="iconcolor" > <span class="material-icons">
+        account_circle
+        </span>
+        Admin </span></a>
+      <a mat-list-item href="#"><span class="iconcolor">
+        <span class="material-icons">
+          post_add
+          </span>Master Data</span></a>
+      <a mat-list-item href="#"><span  class="iconcolor"><span class="material-icons">
+        text_snippet
+        </span>Key Data Configuration</span></a>
+      <a mat-list-item href="#"><span  class="iconcolor"><span class="material-icons">
+        align_vertical_bottom
+        </span>Strategic Agenda Planning</span></a>
+      <a mat-list-item href="#"><span  class="iconcolor"><span class="material-icons">
+        memory
+        </span>Demand Planning</span></a>
+      <a mat-list-item href="#"><span  class="iconcolor"><span class="material-icons">
+        memory
+        </span>Project Tracking</span></a>
+      <a mat-list-item href="#"><span  class="iconcolor"><span class="material-icons">
+        show_chart
+        </span>Reports</span></a>
+      <a mat-list-item href="#"><span  class="iconcolor"><span class="material-icons">
+        show_chart
+        </span>Utilites</span></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <ng-content></ng-content>
+  <mat-sidenav-content>
+   <!-- <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>demo1</span>
+    </mat-toolbar>-->
+    <router-outlet></router-outlet>
+   
+  </mat-sidenav-content>
+</mat-sidenav-container>

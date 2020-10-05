@@ -1,0 +1,30 @@
+
+  .one{
+    background-color: cornflowerblue;
+    flex: 1 1 auto;
+    margin: right;
+  }
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: gray;
+    color: white;
+  }
+  .example-icon {
+    padding: 0 14px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .myDiv {
+    background-color: lightblue;    
+    text-align: center;
+    height: 63px;
+  
+  
+  }
+ .myDiv.h1{
+   padding: 70px 0 px;
+ }
+ 
+  
